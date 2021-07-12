@@ -1,15 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+/* Body properties */
 body {
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
-
-  background-image: url("./assets/images/species.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+  /* background-color: rgba(217, 247, 171, 0.5); */
+  /* Show stacked background repeat in mobiles */
+  background: url("./assets/images/background.jpg") repeat-y;
 }
+
+@media screen and (min-width: 500px) {
+  /* Show fixed single background image in desktops */
+  body {
+    background-image: url("./assets/images/species.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+}
+
+/* End Body Properties */
 
 /* Navigation Bar */
 .nav-container {
@@ -56,7 +68,7 @@ body {
   text-align: center;
   border: 1px solid greenyellow;
   border-radius: 5px;
-  background-color: rgba(255, 228, 196, 0.5);
+  background-color: rgba(255, 228, 196, 0.8);
   box-shadow: -2px 2px 2px #888888;
 }
 
@@ -64,8 +76,6 @@ body {
 @media screen and (min-width: 500px) {
   .card {
     flex: 0 0 44%;
-    background-color: rgba(255, 228, 196, 0.8);
-    box-shadow: -5px 5px 5px #888888;
   }
 }
 
