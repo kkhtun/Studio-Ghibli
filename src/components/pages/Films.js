@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import Card from "./Card";
-import Loading from "../assets/images/loading.gif";
+import Loading from "../../assets/images/loading.gif";
+import CardWrapper from "../CardWrapper";
+import FilmCard from "../FilmCard";
 
-const Container = () => {
+const Films = () => {
   const [films, setFilms] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
@@ -16,15 +17,19 @@ const Container = () => {
   }, []);
 
   return (
-    <main className="container">
+    <>
       {isLoading && (
         <img src={Loading} alt="Fetching Data..." className="loading" />
       )}
       {films &&
         !isLoading &&
-        films.map((film) => <Card film={film} key={film.id} />)}
-    </main>
+        films.map((film) => (
+          <CardWrapper key={film.id}>
+            <FilmCard film={film} />
+          </CardWrapper>
+        ))}
+    </>
   );
 };
 
-export default Container;
+export default Films;

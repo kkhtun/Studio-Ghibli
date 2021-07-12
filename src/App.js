@@ -1,14 +1,20 @@
 import Navbar from "./components/Navbar";
-import Container from "./components/Container";
 import Footer from "./components/Footer";
-
+import { Route, BrowserRouter as Router } from "react-router-dom";
+import Films from "./components/pages/Films";
+import Locations from "./components/pages/Locations";
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <Container />
-      <Footer />
-    </div>
+    <>
+      <Router>
+        <Navbar />
+        <main className="container">
+          <Route path="/" exact component={Films} />
+          <Route path="/locations" component={Locations} />
+        </main>
+        <Footer />
+      </Router>
+    </>
   );
 }
 

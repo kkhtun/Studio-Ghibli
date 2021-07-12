@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import StudioGhibliLogo from "../assets/images/studio-ghibli-logo.svg";
 const Navbar = () => {
   return (
@@ -13,6 +14,17 @@ const Navbar = () => {
         </a>
       </h1>
       <img className="nav-image" src={StudioGhibliLogo} alt="" />
+      <NavLink exact to="/" className="nav-link" activeClassName="nav-active">
+        Films
+      </NavLink>
+      <NavLink
+        exact
+        to="/locations"
+        className="nav-link"
+        activeClassName="nav-active"
+      >
+        Locations
+      </NavLink>
     </nav>
   );
 };

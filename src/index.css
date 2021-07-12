@@ -25,36 +25,56 @@ body {
 
 /* Navigation Bar */
 .nav-container {
-  padding: 1%;
   background-color: bisque;
-  height: 10vh;
+  height: 20vh;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
 }
-.nav-text {
+.nav-container > * {
+  padding: 1%;
   margin-left: 2%;
+}
+.nav-text {
   display: none;
 }
 .nav-text a {
   text-decoration: none;
 }
 .nav-image {
-  margin-left: 2%;
-  height: 100%;
+  height: 50%;
+  flex: 0 0 90%; /* make nav-links go new line */
   object-fit: contain;
+}
+.nav-link {
+  text-decoration: none;
+  padding: 2% 1%;
+}
+.nav-link:hover,
+.nav-link:focus,
+.nav-active {
+  border-bottom: lawngreen 4px solid;
 }
 
 /* Tablet  */
 @media screen and (min-width: 500px) {
-  .nav-text {
-    display: block;
+  .nav-container {
+    /*making nav all in one line*/
+    flex-wrap: nowrap;
+    height: 15vh;
+  }
+  .nav-image {
+    height: 90%;
+    flex: 0 0 auto;
   }
 }
 
 /* Desktop  */
 @media screen and (min-width: 1000px) {
+  .nav-text {
+    display: block;
+  }
 }
 
 /* Start Grid System */
@@ -87,7 +107,7 @@ body {
 }
 /* End Grid System */
 
-/* Individual Card  */
+/* Individual Card for films  */
 .card-wrapper {
   padding: 2%;
   /* a node is place between card and its content for padding */
@@ -107,6 +127,15 @@ body {
   margin-bottom: 0.5%;
 }
 
+/* Adjustments for Locations */
+.location-table {
+  width: 100%;
+  text-align: left;
+}
+.location-table td:first-child {
+  width: 50%;
+  border-right: 2px dashed slateblue;
+}
 /* Footer  */
 footer {
   margin-top: 4%;
