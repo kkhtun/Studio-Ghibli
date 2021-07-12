@@ -1,36 +1,37 @@
 import React, { useState, useEffect } from "react";
 import CardWrapper from "../cards/CardWrapper";
 import Loading from "../../assets/images/loading.gif";
-import LocationCard from "../cards/LocationCard";
+import PeopleCard from "../cards/PeopleCard";
 
-const Locations = () => {
-  const [locations, setLocations] = useState([]);
+const People = () => {
+  const [people, setPeople] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     setIsLoading(true);
-    fetch("https://ghibliapi.herokuapp.com/locations")
+    fetch("https://ghibliapi.herokuapp.com/people")
       .then((res) => res.json())
       .then((data) => {
-        setLocations(data);
+        setPeople(data);
         setIsLoading(false);
       })
-      .catch((error) => console.log(error));
+      .catch((error) => console.error(error));
   }, []);
+
   return (
     <>
       {isLoading && (
         <img src={Loading} alt="Fetching Data..." className="loading" />
       )}
-      {locations &&
+      {people &&
         !isLoading &&
-        locations.map((location) => (
-          <CardWrapper key={location.id}>
-            <LocationCard location={location} />
+        people.map((person) => (
+          <CardWrapper key={person.id}>
+            <PeopleCard person={person} />
           </CardWrapper>
         ))}
     </>
   );
 };
 
-export default Locations;
+export default People;

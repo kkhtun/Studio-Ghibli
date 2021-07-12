@@ -1,8 +1,10 @@
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { Route, BrowserRouter as Router } from "react-router-dom";
+
 import Films from "./components/pages/Films";
 import Locations from "./components/pages/Locations";
+import People from "./components/pages/People";
 function App() {
   return (
     <>
@@ -11,6 +13,7 @@ function App() {
         <main className="container">
           <Route path="/" exact component={Films} />
           <Route path="/locations" component={Locations} />
+          <Route path="/people" component={People} />
         </main>
         <Footer />
       </Router>

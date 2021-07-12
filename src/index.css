@@ -110,7 +110,7 @@ body {
 /* Individual Card for films  */
 .card-wrapper {
   padding: 2%;
-  /* a node is place between card and its content for padding */
+  /* a node is placed between card and its content for padding */
 }
 .card h2 {
   margin: 0;
@@ -136,6 +136,17 @@ body {
   width: 50%;
   border-right: 2px dashed slateblue;
 }
+
+/* Adjustments for people cards */
+.person strong {
+  display: inline;
+  color: #1b9417;
+  font-size: 140%;
+}
+.person p {
+  text-align: center;
+}
+
 /* Footer  */
 footer {
   margin-top: 4%;

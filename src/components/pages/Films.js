@@ -1,19 +1,20 @@
 import React, { useState, useEffect } from "react";
 import Loading from "../../assets/images/loading.gif";
-import CardWrapper from "../CardWrapper";
-import FilmCard from "../FilmCard";
+import CardWrapper from "../cards/CardWrapper";
+import FilmCard from "../cards/FilmCard";
 
 const Films = () => {
   const [films, setFilms] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
+    setIsLoading(true);
     fetch("https://ghibliapi.herokuapp.com/films")
       .then((res) => res.json())
       .then((data) => {
         setFilms(data);
         setIsLoading(false);
       })
-      .catch((error) => console.log(error));
+      .catch((error) => console.error(error));
   }, []);
 
   return (

@@ -18,12 +18,14 @@ const Navbar = () => {
         Films
       </NavLink>
       <NavLink
-        exact
         to="/locations"
         className="nav-link"
         activeClassName="nav-active"
       >
         Locations
+      </NavLink>
+      <NavLink to="/people" className="nav-link" activeClassName="nav-active">
+        People
       </NavLink>
     </nav>
   );
