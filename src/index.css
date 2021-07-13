@@ -176,7 +176,19 @@ body {
 .species tbody td {
   border-bottom: 1px solid lightslategray;
 }
-
+/* Adjustments for vehicle card */
+.vehicle > * {
+  text-align: left;
+  padding: 0% 5%;
+}
+.vehicle pre {
+  font-size: 120%;
+  line-height: 100%;
+}
+.vehicle span {
+  font-size: 120%;
+  font-weight: 600;
+}
 /* Footer  */
 footer {
   margin-top: 4%;

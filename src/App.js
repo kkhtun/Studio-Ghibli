@@ -6,6 +6,7 @@ import Films from "./components/pages/Films";
 import Locations from "./components/pages/Locations";
 import People from "./components/pages/People";
 import Species from "./components/pages/Species";
+import Vehicles from "./components/pages/Vehicles";
 function App() {
   return (
     <>
@@ -16,6 +17,7 @@ function App() {
           <Route path="/locations" component={Locations} />
           <Route path="/people" component={People} />
           <Route path="/species" component={Species} />
+          <Route path="/vehicles" component={Vehicles} />
         </main>
         <Footer />
       </Router>
