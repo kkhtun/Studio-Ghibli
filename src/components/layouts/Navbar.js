@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import StudioGhibliLogo from "../assets/images/studio-ghibli-logo.svg";
+import StudioGhibliLogo from "../../assets/images/studio-ghibli-logo.svg";
 const Navbar = () => {
   return (
     <nav className="nav-container">
