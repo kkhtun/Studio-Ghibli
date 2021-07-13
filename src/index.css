@@ -147,6 +147,31 @@ body {
   text-align: center;
 }
 
+/* Adjustments for Species Card */
+.species table {
+  width: 100%;
+}
+.species thead span {
+  color: #8311b8;
+  font-weight: bold;
+  font-size: 130%;
+}
+.species tbody td:first-child {
+  width: 50%;
+  text-align: right;
+}
+.species tbody td:nth-child(2) {
+  text-align: left;
+  font-weight: 700;
+}
+.species tbody span {
+  color: #1b9417;
+  font-weight: 700;
+}
+.species tbody td {
+  border-bottom: 1px solid lightslategray;
+}
+
 /* Footer  */
 footer {
   margin-top: 4%;
